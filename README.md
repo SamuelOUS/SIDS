@@ -1,8 +1,5 @@
-
-
-![SIDS captura](https://github.com/user-attachments/assets/9288b2c8-22cd-49af-a6b4-c6f066f860e6)
-<br>
 <div align="center">
+  <img src="https://github.com/user-attachments/assets/9288b2c8-22cd-49af-a6b4-c6f066f860e6" alt="SIDS captura" style="display: block; margin: auto;">
   <h1>SIDS</h1>
   <p>
     SIDS es una aplicación diseñada para grupos de amigos gamers que desean mantenerse conectados y organizados durante sus sesiones de juego. Construida con React y Electron, esta aplicación ofrece una plataforma integrada para la gestión de juegos, comunicación y planificación de eventos en línea.
@@ -19,5 +16,3 @@
     SIDS está diseñada para simplificar la experiencia de juego en grupo, proporcionando herramientas intuitivas y funcionales para maximizar la diversión y la coordinación entre amigos gamers.
   </p>
 </div>
-
-
