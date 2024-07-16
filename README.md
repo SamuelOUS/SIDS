@@ -1,5 +1,5 @@
-<div align="center">
   ![SIDS captura](https://github.com/user-attachments/assets/96fc8ba4-7073-45af-8cd9-c5921cbbf308)
+<div align="center">
 
   <h1>SIDS</h1>
   <p>
