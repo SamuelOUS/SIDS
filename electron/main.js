@@ -6,13 +6,21 @@ let mainWindow;
 const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1000,
-    height: 800,
+    height: 600,
+    minWidth:1000,
+    maxWidth:1000,
+    maxHeight:600,
+    minHeight:600,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       contextIsolation: false
+
     }
   });
+  Menu.setApplicationMenu(null);
+  
 
   mainWindow.loadURL('http://localhost:3000');
 

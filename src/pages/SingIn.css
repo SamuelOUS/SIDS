@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 20, 20);
+}
+
+.container {
+  display: flex; /* Utiliza Flexbox para alinear los elementos en fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: 100vh; /* Asegúrate de que la altura sea 100% de la vista */
+}
+
+.LeftBox {
+  background-color: #e72323;
+  height: 65vh; 
+  width: 50vh;
+
+}
+
+.RightBox {
+  background-color: #d8d8d8;
+  height: 65vh; 
+  width: 80vh;
+}
