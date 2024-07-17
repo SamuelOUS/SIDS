@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 20, 20);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/components/WhatsApp\ Image\ 2024-07-16\ at\ 10.24.58\ PM.jpeg'); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Ajusta el valor de blur según quieras más o menos difuminado */
+  z-index: -2;
+}
+button {
+  -webkit-app-region: no-drag;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.LeftBox {
+  position: relative; /* Asegura que los pseudo-elementos se posicionen relativos a este contenedor */
+  background-color: #fa4a4a;
+  height: 65vh;
+  width: 50vh;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que los pseudo-elementos se salgan del contenedor */
+}
+
+.LeftBox::before,
+.LeftBox::after {
+  content: '';
+  position: absolute;
+  background-color: #ff5858;
+  width: 100vh; /* Ancho del rectángulo negro */
+  height: 200px; /* Alto del rectángulo negro */
+  transform: rotate(45deg); /* Rotación de 45 grados */
+  z-index: 1; /* Asegura que estén sobre el contenido del LeftBox */
+}
+
+.LeftBox::before {
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la parte izquierda */
+}
+
+.LeftBox::after {
+  bottom: 10px; /* Distancia desde la parte inferior */
+  right: 10px; /* Distancia desde la parte derecha */
+}
+
+.RightBox {
+  background-color: hsl(0, 0%, 15%);
+  height: 65vh;
+  width: 80vh;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.DragBar {
+  -webkit-app-region: drag;
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.SignTitle {
+  color: aliceblue;
+  font-weight:1000;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Email, .Password {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid rgb(82, 81, 81);
+  border-radius: 9px;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 14%);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Email:focus {
+  outline: 2px solid #cfcfcf; /* Cambia el color del contorno al recibir el foco */
+}
+
+
+.Password:focus{
+  outline: 1px solid #cfcfcf;
+}
+
+.SignInButton {
+  width: 30%;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f85c5c;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SignInButton:hover {
+  background-color: #fa4e4e;
+}
+
+.TextContainer {
+  transform: rotate(45deg); /* Contrarresta la rotación de los cuadros */
+}
+
+.SIDS {
+  font-size: 7rem; /* Tamaño del texto ajustable */
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+}
+.App {
+  border-radius: 200px; /* Redondea las esquinas de la ventana de la aplicación */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
