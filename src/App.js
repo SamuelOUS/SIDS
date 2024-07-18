@@ -6,8 +6,9 @@ import Profile from './pages/Profile'
 import Settings from './pages/Settings'
 import Pings from './pages/Pings'
 import Gambling from './pages/Gambling'
-import CarGame from './pages/CarGame'
+import Roulette from './pages/Roulette'
 import Chat from './pages/Chat'
+import ShowMore from './pages/ShowMore'
 
 
 function App() {
@@ -19,10 +20,11 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Gambling" element={<Gambling />} />
         <Route path="/Settings" element={<Settings />} />
-        <Route path="/CarGame" element={<CarGame />} />
+        <Route path="/Roulette" element={<Roulette />} />
         <Route path="/Pings" element={<Pings />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/ShowMore" element={<ShowMore />} />
       </Routes>
     </Router>
   );
