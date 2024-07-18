@@ -1,0 +1,155 @@
+body.sign-in-body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 20, 20);
+  position: relative;
+}
+
+body.sign-in-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+body.sign-in-body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/components/WhatsApp\ Image\ 2024-07-16\ at\ 10.24.58\ PM.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.leftBox {
+  position: relative;
+  background-color: #fa4a4a;
+  height: 65vh;
+  width: 50vh;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.leftBox::before,
+.leftBox::after {
+  content: '';
+  position: absolute;
+  background-color: #ff5858;
+  width: 100vh;
+  height: 200px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.leftBox::before {
+  top: 0px;
+  left: 50px;
+}
+
+.leftBox::after {
+  bottom: 10px;
+  right: 50px;
+}
+
+.rightBox {
+  background-color: hsl(0, 0%, 15%);
+  height: 65vh;
+  width: 80vh;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dragBar {
+  -webkit-app-region: drag;
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.signTitle {
+  color: aliceblue;
+  font-weight: 1000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.email,
+.password {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid rgb(82, 81, 81);
+  border-radius: 9px;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 14%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.email:focus,
+.password:focus {
+  outline: 2px solid #cfcfcf;
+}
+
+.signInButton {
+  width: 150px;
+  margin-bottom: 10px;
+  height: 50px;
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f85c5c;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.signInButton:hover {
+  background-color: #fa4e4e;
+
+ 
+}
+
+.textContainer {
+  transform: rotate(45deg);
+}
+
+.SIDS {
+  font-size: 7rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
