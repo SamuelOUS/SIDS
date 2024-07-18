@@ -21,6 +21,7 @@ const Landing = () => {
 
     return (
         <div className='dragBar'>
+        <div className='InterfaceLayer'>
             <div className="menu">
                 <div className='TopButtons'>
                     <Link to="/Profile">
@@ -34,9 +35,15 @@ const Landing = () => {
                     </Link>
                 </div>
                 <div className='Features'>
-                    <button className='Anclados'></button>
-                    <button className='Carrera'></button>
+                    <Link to='/Pings'>
+                    <button className='Ping'></button>
+                    </Link>
+                    <Link to='/Gambling'>
                     <button className='Gambling'></button>
+                    </Link>
+                    <Link to='/Roulette'>
+                    <button className='Roulette'></button>
+                    </Link>
                 </div>
                 <div className='separator'></div>
                 <div className='chats'>
@@ -48,9 +55,12 @@ const Landing = () => {
                             </button>
                         ))}
                     </div>
+                    <Link to='/ShowMore'>
                     <button className='ShowMore'>Mostrar más</button>
+                    </Link>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

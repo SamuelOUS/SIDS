@@ -3,14 +3,13 @@ body.landing-body {
     background-repeat: no-repeat;
     background-position: right top;
     margin: 0;
-    background-color: #1a1a1a;
+    background-color: #fafafa;
 }
 
 .menu {
     background-color: rgb(39, 36, 36);
     height: 25vh;
     margin-left: 4px;
-    margin-top: 5px;
     width: 40vh;
     box-shadow: rgba(0, 0, 0, 0.12) 5px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     position: relative; /* Añadido para ajustar el posicionamiento de los botones */
@@ -114,14 +113,14 @@ body.landing-body {
     cursor: pointer;
     width: 30px;
     height: 30px;
-    background-image: url('/public/components/2006310.png');
+    background-image: url('/public/components/dos.png');
     background-size: 30px;
     background-repeat: no-repeat;
     
     
     
 }
-.Anclados{
+.Ping{
     background-color: transparent;
     border: none;
     color: rgb(255, 255, 255);
@@ -129,14 +128,14 @@ body.landing-body {
     cursor: pointer;
     width: 30px;
     height: 30px;
-    background-image: url('/public/components/9356230.png');
+    background-image: url('/public/components/alfiler.png');
     background-size: 30px;
     background-repeat: no-repeat;
     
     
 }
 
-.Carrera{
+.Roulette{
     background-color: transparent;
     border: none;
     color: rgb(255, 255, 255);
@@ -144,7 +143,7 @@ body.landing-body {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background-image: url('/public/components//race-cars-flat-6dd18d.webp');
+    background-image: url('/public/components/rueda-de-la-fortuna.png');
     background-size: 40px;
     background-repeat: no-repeat;
 }

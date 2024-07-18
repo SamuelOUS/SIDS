@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   useEffect(() => {
-    // Añadir clase al cargar el componente
+    
     document.body.classList.add('sign-in-body');
 
     // Eliminar clase al desmontar el componente

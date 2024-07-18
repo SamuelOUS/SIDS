@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import '../styles/Settings.css';
+import '../styles/ShowMore.css';
 
-const Settings = () => {
+const ShowMore = () => {
     const ChatButtons = [
         { id: 1, text: 'Cristo', imgSrc: '/components/272243943_447319577103312_1197167401850518755_n.jpg' },
         { id: 2, text: 'Pacho', imgSrc: '/components/285291523_856188839103906_1318554899983793930_n.jpg' },
@@ -58,4 +58,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default ShowMore;
