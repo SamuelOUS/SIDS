@@ -57,6 +57,8 @@
     background-size: 40px;
     border-color: transparent;
     background-image: url('/public/components/110128889.png');
+    box-shadow: rgba(0, 0, 0, 0.12) 5px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    
 }
 
 .exit {
@@ -66,7 +68,7 @@
     position: absolute;
     top: 10px;
     left: 165px;
-    background-image: url('/public/components/Group\ 10.png');
+    background-image: url('/public/components/cerrar-sesion.png');
     border-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -82,7 +84,7 @@
     position: absolute;
     top: 10px;
     left: 140px;
-    background-image: url('/public/components/Group\ 8.png');
+    background-image: url('/public/components/rueda-dentada.png');
     border-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -202,4 +204,43 @@
     font-weight: 700;
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.SaveButton{
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: 900;
+}
+
+.EditButton{
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 770px;
+    background-image: url('/public/components/lapiz.png');
+    width: 50px;
+    height: 50px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+
+.EditName{
+    border-color: transparent;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.EditAlias{
+    border-color: transparent;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.EditStatus{
+    border-color: transparent;
+    border-radius: 3px;
+    margin: 10px;
 }
