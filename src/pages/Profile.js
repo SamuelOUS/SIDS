@@ -13,47 +13,65 @@ const Profile = () => {
 
     return(
         <div className='dragBar'>
-        <div className='InterfaceLayer'>
+            <div className='InterfaceLayerProfile'>
+                <div className="ProfilePhoto"></div>
+                <div className="ProfileData">
 
-            <div className="menu">
-                <div className='TopButtons'>
-                    <Link to="/Profile">
-                    <button className='profile'></button>
-                    </Link>
-                    <Link to="/Settings">
-                    <button className='settings'></button>
-                    </Link>
-                    <Link to="/SignIn">
-                    <button className='exit'></button>
-                    </Link>
+                    <div className="Name">Samuel Osorio Uribe</div>
+                    
+                    <div className="Alias">Pacho</div>
+                    <br></br>
+                    <div className="Status">Estado:</div>
+                    
+                    <div className="StatusText">feliz</div>
+                    <br></br>
+                    <div className="MoneyExpent">Dinero gastado: <br></br>0</div>
+                    
+                    <div className="MoneyWon">Dinero ganado:<br></br>0</div>
                 </div>
-                <div className='Features'>
-                    <Link to='/Pings'>
-                    <button className='Ping'></button>
-                    </Link>
-                    <Link to='/Gambling'>
-                    <button className='Gambling'></button>
-                    </Link>
-                    <Link to='/Roulette'>
-                    <button className='Roulette'></button>
-                    </Link>
-                </div>
-                <div className='separator'></div>
-                <div className='chats'>
-                    <div className='ChatsList'>
-                        {ChatButtons.map(button => (
-                            <button key={button.id} className='chatButton'>
-                                <img src={button.imgSrc} className='chatIcon' alt={`Icon for ${button.text}`} />
-                                <span className='chatText'>{button.text}</span>
-                            </button>
-                        ))}
+
+            </div>
+            <div className='InterfaceLayer'>
+
+                <div className="menu">
+                    <div className='TopButtons'>
+                        <Link to="/Profile">
+                        <button className='profile'></button>
+                        </Link>
+                        <Link to="/Settings">
+                        <button className='settings'></button>
+                        </Link>
+                        <Link to="/SignIn">
+                        <button className='exit'></button>
+                        </Link>
                     </div>
-                    <Link to='/ShowMore'>
-                    <button className='ShowMore'>Mostrar más</button>
-                    </Link>
+                    <div className='Features'>
+                        <Link to='/Pings'>
+                        <button className='Ping'></button>
+                        </Link>
+                        <Link to='/Gambling'>
+                        <button className='Gambling'></button>
+                        </Link>
+                        <Link to='/Roulette'>
+                        <button className='Roulette'></button>
+                        </Link>
+                    </div>
+                    <div className='separator'></div>
+                    <div className='chats'>
+                        <div className='ChatsList'>
+                            {ChatButtons.map(button => (
+                                <button key={button.id} className='chatButton'>
+                                    <img src={button.imgSrc} className='chatIcon' alt={`Icon for ${button.text}`} />
+                                    <span className='chatText'>{button.text}</span>
+                                </button>
+                            ))}
+                        </div>
+                        <Link to='/ShowMore'>
+                        <button className='ShowMore'>Mostrar más</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
 </div>
     );
 };
