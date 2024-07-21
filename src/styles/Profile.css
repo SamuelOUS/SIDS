@@ -203,3 +203,44 @@
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.InterfaceLayerProfile{
+    background-image: url("/public/components/Oceano-Artico-scaled.jpg");
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    left: 200px;
+    height: 100vh;
+    width: 200vh;
+ 
+
+    
+}
+
+.ProfilePhoto{
+    background-image: url("/public/components/110128889.png");
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-position: center;
+    background-size: 200px;
+    margin-left: 300px;
+    margin-top: 10px;
+    
+
+}.ProfileData{
+    color:#ffffff;
+    margin-left: 300px;
+    margin-top: 90px;
+    width: 200px;
+    height: 100px;
+    display: flex;               /* Usa flexbox */
+    flex-direction: column;      /* Orienta los elementos verticalmente */
+    justify-content: center;     /* Centra los elementos verticalmente dentro del contenedor */
+    align-items: center;         /* Centra los elementos horizontalmente dentro del contenedor */
+    position: relative;
+    text-align: center;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+    font-size:medium;
+}
