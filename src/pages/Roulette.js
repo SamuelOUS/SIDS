@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Wheel } from 'react-custom-roulette';
 import '../styles/Roulette.css';
 
 const Roulette = () => {
+
+    useEffect(() => {
+        document.body.classList.add('roulette-body');
+        return () => {
+            document.body.classList.remove('roulette-body');
+        };
+    }, []);
+
+    
     const [mustSpin, setMustSpin] = useState(false);
     const [prizeNumber, setPrizeNumber] = useState(0);
 
@@ -37,16 +46,31 @@ const Roulette = () => {
             <div className="InterfaceLayerRoulette">
                 <div className='rouletteContainer'>
                     <Wheel
+                        
                         mustStartSpinning={mustSpin}
                         prizeNumber={prizeNumber}
                         data={segments}
-                        backgroundColors={['#3e3e3e', '#df3428']}
+                        outerBorderWidth={20} 
+                        outerBorderColor='#292424'
+
+                        innerBorderWidth={20}
+                        innerBorderColor=''
+                        innerRadius={20}
+
+                        radiusLineWidth={10}
+                        radiusLineColor="#F6BE6E"
+
+                        backgroundColors={['#1E201D', '#A50603']}
                         textColors={['#ffffff']}
+                        
+
+
                         onStopSpinning={() => {
                             setMustSpin(false);
                             setPrizeNumber(prizeNumber);
                         }}
                     />
+                    
                     <button onClick={handleSpinClick} className='spinButton'>Girar</button>
                     {prizeNumber !== null && <div className='selectedResult'>Seleccionado: {DataRoulette[prizeNumber].text}</div>}
                 </div>
