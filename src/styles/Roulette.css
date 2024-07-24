@@ -1,7 +1,31 @@
+
+.roulette-body{
+    background-repeat: no-repeat ;
+    background-size: 1000px;
+    background-position: 200px 0px;
+    background-image: url('/public/components/abstract-black-background-design-banner-pattern-background-template-suitable-for-various-background-design-template-banner-poster-presentation-etc-vector.jpg');
+}
+
+
+
+
+
 .rouletteContainer {
+    > div {
+        height: 75%;
+        width: 75%;
+        max-height: unset;
+        max-width: unset;
+        margin-bottom: 100px;
+        
+   }
     position: absolute;
+    
+    
+    border-radius: 20px; /* Bordes redondeados para un efecto suave */
     left: 400px;
     text-align: center;
+    
     background-color: #111111;
     width: 100vh;
     height: 100vh;
@@ -12,9 +36,17 @@
 }
 
 .spinButton {
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: rgb(192, 33, 33);
+    border-radius: 10px;
+    border-color: transparent;
+    color: white;
+    position: absolute;
+    left: 605px;
+    top: 370px;
+    
 }
 
 .selectedResult {
@@ -22,6 +54,7 @@
     font-size: 18px;
     color: rgb(255, 255, 255);
     position: absolute;
-    top: 00px;
-    left: 200px;
+    top: 360px;
+    left: 620px;
+
 }

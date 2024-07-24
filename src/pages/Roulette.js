@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Wheel } from 'react-custom-roulette';
 import '../styles/Roulette.css';
 
 const Roulette = () => {
+    useEffect(() => {
+        document.body.classList.add('roulette-body');
+        return () => {
+            document.body.classList.remove('roulette-body');
+        };
+    }, []);
+
     const [mustSpin, setMustSpin] = useState(false);
-    const [prizeNumber, setPrizeNumber] = useState(0);
+    const [prizeNumber, setPrizeNumber] = useState(null);
+    const [selectedPrize, setSelectedPrize] = useState(null);
 
     const ChatButtons = [
         { id: 1, text: 'Cristo', imgSrc: '/components/272243943_447319577103312_1197167401850518755_n.jpg' },
@@ -16,12 +24,15 @@ const Roulette = () => {
     ];
 
     const DataRoulette = [
-        { id: 1, text: "Sexo" },
-        { id: 2, text: "Volver" },
-        { id: 3, text: "Dejarla" },
-        { id: 4, text: "Amarla" },
-        { id: 5, text: "Robarla" },
-        { id: 6, text: "Matarla" }
+        { id: 1, text: "Pacho"},
+        { id: 2, text: "Milo"},
+        { id: 3, text: "Nene" },
+        { id: 4, text: "Cristo"},
+        { id: 4, text: "Ganzo"},
+        { id: 4, text: "Wacho"},
+        { id: 4, text: "Nikel"},
+        { id: 4, text: "Juans"},
+
     ];
 
     const segments = DataRoulette.map(item => ({ option: item.text }));
@@ -32,6 +43,12 @@ const Roulette = () => {
         setMustSpin(true);
     };
 
+    useEffect(() => {
+        if (!mustSpin && prizeNumber !== null) {
+            setSelectedPrize(DataRoulette[prizeNumber].text);
+        }
+    }, [mustSpin]);
+
     return (
         <div className='dragBar'>
             <div className="InterfaceLayerRoulette">
@@ -40,16 +57,28 @@ const Roulette = () => {
                         mustStartSpinning={mustSpin}
                         prizeNumber={prizeNumber}
                         data={segments}
-                        backgroundColors={['#3e3e3e', '#df3428']}
+                        outerBorderWidth={20} 
+                        outerBorderColor='#292424'
+
+
+                        innerBorderWidth={20}
+                        innerBorderColor=''
+                        innerRadius={20}
+
+                        radiusLineWidth={10}
+                        radiusLineColor="#F6BE6E"
+
+                        backgroundColors={['#1E201D', '#A50603']}
                         textColors={['#ffffff']}
+                        
                         onStopSpinning={() => {
                             setMustSpin(false);
-                            setPrizeNumber(prizeNumber);
+                            // No actualizar el texto aquí
                         }}
                     />
-                    <button onClick={handleSpinClick} className='spinButton'>Girar</button>
-                    {prizeNumber !== null && <div className='selectedResult'>Seleccionado: {DataRoulette[prizeNumber].text}</div>}
                 </div>
+                <button onClick={handleSpinClick} className='spinButton'>Girar</button>
+                {selectedPrize && <div className='selectedResult'>{selectedPrize}</div>}
             </div>
             <div className='InterfaceLayer'>
                 <div className="menu">
