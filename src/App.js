@@ -17,10 +17,10 @@ function App() {
 
         {/* Rutas sin menú */}
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/" element={<SignIn />} />
 
         {/* Rutas con menú */}
         <Route element={<Layout />}>
-          <Route path="/" element={<SignIn />} />
           <Route path="/Landing" element={<Landing />} />
           <Route path="/Chat" element={<Chat />} />
           <Route path="/Gambling" element={<Gambling />} />
