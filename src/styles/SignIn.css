@@ -39,7 +39,7 @@ body.sign-in-body::after {
 
 .leftBox {
   position: relative;
-  background-color: #fa4a4a;
+  background-color: #000000;
   height: 65vh;
   width: 50vh;
   border-top-left-radius: 30px;
@@ -51,16 +51,7 @@ body.sign-in-body::after {
   overflow: hidden;
 }
 
-.leftBox::before,
-.leftBox::after {
-  content: '';
-  position: absolute;
-  background-color: #ff5858;
-  width: 100vh;
-  height: 200px;
-  transform: rotate(45deg);
-  z-index: 1;
-}
+
 
 .leftBox::before {
   top: 0px;

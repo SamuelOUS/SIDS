@@ -8,10 +8,6 @@ const createWindow = () => {
     frame: false,
     width: 1050,
     height: 475,
-    minWidth:1050,
-    maxWidth:1050,
-    maxHeight:475,
-    minHeight:475,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
@@ -32,12 +28,8 @@ const createWindow = () => {
           mainWindow.webContents.openDevTools();
         }
       },
-      {
-        label: 'matar a dakar',
-        click: () => {
-          // Acción a realizar cuando se selecciona esta opción
-        }
-      },
+
+      
       {
         type: 'separator' // Separador visual entre las opciones del menú
       },
