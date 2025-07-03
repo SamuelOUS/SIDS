@@ -20,7 +20,7 @@ function App() {
 
         {/* Rutas con menú */}
         <Route element={<Layout />}>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<SignIn />} />
           <Route path="/Landing" element={<Landing />} />
           <Route path="/Chat" element={<Chat />} />
           <Route path="/Gambling" element={<Gambling />} />
